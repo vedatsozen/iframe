@@ -1,0 +1,46 @@
+body {
+
+    background-image: url("imgs/iletisim.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header > div {
+    margin: auto;
+    height:70%;
+    width:50%;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+}
+
+header > div > div > h1 {
+    margin: auto;
+    margin-top: 50px;
+    font-size:15px;
+    letter-spacing: 5px;
+    color: white;
+   
+} 
+
+i.bi {
+    font-size: 2rem;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANASAYFA</title>
+    <link rel="stylesheet" href="anasayfa.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeri.css">
+</head>
+<body>
+
+<h1>Galeri</h1>
+
+<div id="resimler"></div>
+
+<script>
+
+let resimler = document.getElementById("resimler");
+
+for ( let i = 1; i < 9 ; i++) {
+    
+    let yeniResim = document.createElement("img");
+    yeniResim.classList.add("yeniresim");
+    yeniResim.src = "imgs/resim" + i + ".jpg";
+    resimler.appendChild(yeniResim);
+}
+
+</script>
+   
+</body>
+</html>

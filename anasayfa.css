@@ -1,0 +1,41 @@
+body {
+
+    background-image: url("imgs/anasayfa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div {
+    height:fit-content;
+    width: 70%;
+    padding:20px 30px;
+    box-sizing: content-box !important;
+     background-color: rgba(0,0,0,0.7);
+}
+
+header > div > h1 {
+    margin: auto;
+    font-size: 50px;
+    letter-spacing: 5px;
+    color: white;
+   
+   
+}
+
+header > div > p {
+    margin: auto;
+    font-size:16px;
+    letter-spacing: 5px;
+    color: white;
+
+  
+}
