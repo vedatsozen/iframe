@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="anasayfa.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="galeri.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -16,15 +17,43 @@
 
 <script>
 
-let resimler = document.getElementById("resimler");
+$(document).ready(function() {
+    let resimler = $("#resimler");
 
-for ( let i = 1; i < 9 ; i++) {
-    
-    let yeniResim = document.createElement("img");
-    yeniResim.classList.add("yeniresim");
-    yeniResim.src = "imgs/resim" + i + ".jpg";
-    resimler.appendChild(yeniResim);
-}
+    for (let i = 1; i < 9; i++) {
+        let yeniResim = $("<img>");
+        yeniResim.addClass("yeniresim");
+        yeniResim.attr("src", "imgs/resim" + i + ".jpg");
+        resimler.append(yeniResim);
+    }
+
+    // Event delegation for dynamically added elements
+    resimler.on("click", ".yeniresim", function() {
+        let yeniresimsrc = $(this).attr("src");
+
+        // Remove previous modal if exists
+        $(".modal").remove();
+
+        let popupResmi = $("<img>");
+        popupResmi.addClass("popupresmi");
+        popupResmi.attr("src", yeniresimsrc);
+
+        // Display the larger image in a modal
+        let modal = $("<div>").addClass("modal").append(popupResmi);
+        $("body").append(modal);
+
+        // Create close button
+        let kapat = $("<img>");
+        kapat.addClass("kapat");
+        kapat.attr("src", "imgs/kapat.png");
+        modal.append(kapat);
+
+        // Event listener for closing modal
+        kapat.click(function() {
+            modal.remove();
+        });
+    });
+});
 
 </script>
    

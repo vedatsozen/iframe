@@ -40,3 +40,31 @@ img.yeniresim:hover {
     transition: 500ms ease;
     transform: translateY(-5px);
 }
+
+.modal {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height:80%;
+    width: auto;
+ 
+}
+
+.popupresmi {
+    height: 100%;
+    width: 100%;
+}
+
+.kapat {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.kapat:active {
+    transform: scale(0.9);
+}
